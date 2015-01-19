@@ -24,9 +24,22 @@ public class Locators {
     }
 
     public static By get(String elementName) {
-        String[] locatorItems = LOCATORS.getProperty(elementName).split("=", 2);
+        String locator = LOCATORS.getProperty(elementName);
+        return getLocator(locator);
+    }
+
+    public static By get(String elementName, String value) {
+        String locator = LOCATORS.getProperty(elementName);
+        return getLocator(String.format(locator, value));
+    }
+
+    public static String get() {
+        return LOCATORS.getProperty("");
+    }
+    private static By getLocator(String locator) {
+        String[] locatorItems = locator.split("=", 2);
         LocatorType locatorType = LocatorType.valueOf(locatorItems[0]);
-        
+
         switch (locatorType) {
             case css: {
                 return By.cssSelector(locatorItems[1]);
