@@ -1,10 +1,9 @@
 package helpers;
 
-import org.openqa.selenium.By;
 
 import java.io.InputStream;
 import java.util.Properties;
-import java.util.Set;
+
 
 public class Creds {
     private static final Properties CREDENTIALS;

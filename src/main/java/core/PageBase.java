@@ -1,14 +1,13 @@
 package core;
 
 import org.openqa.selenium.WebDriver;
+//For architecture means PageBase is empty
 
-/**
- * Created by Admin on 19.01.2015.
- */
+
 public class PageBase {
-    protected WebDriver driver;
-
-    public PageBase(WebDriver driver){
-        this.driver = driver;
-    }
+//    protected WebDriver driver;
+//
+//    public PageBase(WebDriver driver){
+//        this.driver = driver;
+//    }
 }
