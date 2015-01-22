@@ -40,6 +40,7 @@ public class GithubLoginTest extends TestBase {
 
     @Test
     public void negativeLoginWithPropertyTest(){
+
         String[] credentials = Creds.getUser("github.user.admin");
         PageObject.login(credentials[0], credentials[1]);
         Assert.assertTrue(Waiter.waitForElement(getDriver(), PageObject.VALIDATION_MESSAGE).isDisplayed());
