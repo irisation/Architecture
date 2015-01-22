@@ -13,7 +13,7 @@ public class TestBase {
 
     @BeforeMethod
     public void setup() throws InterruptedException {
-        String browser = System.getProperty("browser", "chrome");
+        String browser = System.getProperty("browser", "phantomjs");
         WebDriverSingleton.initDriver(browser).get(BASE_URL);
     }
 

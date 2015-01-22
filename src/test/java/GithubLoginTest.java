@@ -7,6 +7,7 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import pages.PageObject;
 
+import java.io.File;
 import java.io.IOException;
 
 import static helpers.WebDriverSingleton.getDriver;
@@ -20,7 +21,7 @@ public class GithubLoginTest extends TestBase {
     public void negativeLoginTest() throws IOException {
         PageObject.login("sfgsgf", "sfssdfsf");
         Actions.takeScreenshot("D:/Students/screen.png");
-        Assert.assertTrue(Waiter.waitForElement(getDriver(), PageObject.VALIDATION_MESSAGE).isDisplayed());
+        Assert.assertFalse(Waiter.waitForElement(getDriver(), PageObject.VALIDATION_MESSAGE).isDisplayed());
         Assert.assertTrue(getDriver().findElement(PageObject.VALIDATION_MESSAGE).isDisplayed());
 
     }
@@ -29,6 +30,8 @@ public class GithubLoginTest extends TestBase {
     public void onlinerTest() {
         getDriver().get("http://onliner.by");
         Actions.takeScreenshot("D:/Students/screen.png");
+        File file = new File("D:/Student/me");
+        file.mkdirs();
     }
 
     @Test(dataProviderClass = DataProviders.class, dataProvider = "usersData")
