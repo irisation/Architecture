@@ -1,4 +1,2 @@
-D:\Students\IrynaBusel\SeleniumDrivers>java -jar selenium-server-standalone-2.44
-.0.jar -role hub -- для хаба
-D:\Students\IrynaBusel\SeleniumDrivers>java -jar selenium-server-standalone-2.44
-.0.jar -role node -hub http://192.168.37.122:4444/grid/register -- для нода
+D:\Students\IrynaBusel\SeleniumDrivers>java -jar selenium-server-standalone-2.44.0.jar -role hub -- для хаба
+D:\Students\IrynaBusel\SeleniumDrivers>java -jar selenium-server-standalone-2.44.0.jar -role node -hub http://192.168.37.122:4444/grid/register -- для нода

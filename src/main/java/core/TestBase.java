@@ -12,7 +12,7 @@ public class TestBase {
 
     @BeforeMethod
     public void setup() throws InterruptedException {
-        String browser = System.getProperty("browser", "chrome");
+        String browser = System.getProperty("browser", "firefox");
         WebDriverSingleton.initDriver(browser).get(BASE_URL);
     }
 

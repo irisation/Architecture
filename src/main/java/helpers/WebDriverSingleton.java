@@ -6,7 +6,13 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.phantomjs.PhantomJSDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
+
+import javax.print.DocFlavor;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 public class WebDriverSingleton {
@@ -24,10 +30,13 @@ public class WebDriverSingleton {
         }
     }
 
-    public static WebDriver initDriver(String browser) {
+    public static WebDriver initDriver(String browser) throws MalformedURLException {
         switch (browser) {
             case "firefox": {
-                driver = new FirefoxDriver();
+//                driver = new RemoteWebDriver(DesiredCapabilities.firefox());
+                DesiredCapabilities capabilities = new DesiredCapabilities();
+                capabilities.setBrowserName("firefox");
+                driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), DesiredCapabilities.firefox());
                 break;
             }
             case "chrome": {
