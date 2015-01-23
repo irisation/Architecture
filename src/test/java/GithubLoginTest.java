@@ -30,8 +30,6 @@ public class GithubLoginTest extends TestBase {
     public void onlinerTest() {
         getDriver().get("http://onliner.by");
         Actions.takeScreenshot("D:/Students/screen.png");
-        File file = new File("D:/Student/me");
-        file.mkdirs();
     }
 
     @Test(dataProviderClass = DataProviders.class, dataProvider = "usersData")
