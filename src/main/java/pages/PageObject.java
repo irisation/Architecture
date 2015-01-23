@@ -3,8 +3,6 @@ package pages;
 
 import core.PageBase;
 import org.openqa.selenium.By;
-
-
 import static helpers.Locators.get;
 import static helpers.WebDriverSingleton.getDriver;
 
