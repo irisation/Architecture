@@ -1,2 +1,6 @@
 D:\Students\IrynaBusel\SeleniumDrivers>java -jar selenium-server-standalone-2.44.0.jar -role hub -- для хаба
 D:\Students\IrynaBusel\SeleniumDrivers>java -jar selenium-server-standalone-2.44.0.jar -role node -hub http://192.168.37.122:4444/grid/register -- для нода
+cd students\irynabusel\seleniumdrivers
+
+D:\Students\IrynaBusel\SeleniumDrivers>start java -jar selenium-server-standalone-2.44.0.jar -role node -hub http://192.168.37.125:4444/grid/register -port 7777 -browser browserName=firefox,version=29,maxInstances=3 -browser browserName=chrome,version=37,maxInstances=3
+D:\Students\IrynaBusel\SeleniumDrivers>java -jar selenium-server-standalone-2.44.0.jar -role node -hub http://192.168.37.188:4444/grid/register -port 7778 -browser browserName=firefox,version=29,maxInstances=5
