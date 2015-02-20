@@ -3,6 +3,8 @@ import core.TestBase;
 import helpers.*;
 import helpers.Actions;
 import junit.framework.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import pages.PageObject;
@@ -45,6 +47,7 @@ public class GithubLoginTest extends TestBase {
         String[] credentials = Creds.getUser("github.user.admin");
         PageObject.login(credentials[0], credentials[1]);
         Assert.assertTrue(Waiter.waitForElement(getDriver(), PageObject.VALIDATION_MESSAGE).isDisplayed());
+
     }
 
 }
